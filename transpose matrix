@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+#define ROWS 3
+#define COLS 3
+
+void transposeMatrix(int matrix[ROWS][COLS]) {
+    int temp;
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = i + 1; j < COLS; j++) {
+            temp = matrix[i][j];
+            matrix[i][j] = matrix[j][i];
+            matrix[j][i] = temp;
+        }
+    }
+}
+
+int main() {
+	printf("samivulla\n192321078\n");
+    int matrix[ROWS][COLS] = {{1, 2, 3},
+                              {4, 5, 6},
+                              {7, 8, 9}};
+
+    printf("Original Matrix:\n");
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    transposeMatrix(matrix);
+
+    printf("\nTransposed Matrix:\n");
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+"C:\Users\samiv\OneDrive\Pictures\Screenshots\Screenshot 2023-12-21 120956.png"
